@@ -1,5 +1,3 @@
-@charset 'UTF-8';
-
 * {
     padding: 0;
     margin: 0;
@@ -8,7 +6,7 @@
 }
 
 body {
-    background-color: #090e22;
+    background-color: #090e2279;
     display: flex;
     justify-content: center;
     align-items: center;

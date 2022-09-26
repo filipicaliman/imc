@@ -1,49 +1,49 @@
 // DADOS IMC
-dados const =[
+const data = [
     {
-        min: 0 ,
-        máx .: 18, 4 ,
-        classificação: "Menor que 18,5" ,
-        info: "Magreza" ,
-        obesidade: "0" ,
+        min: 0,
+        max: 18.4,
+        classification: "Menor que 18,5",
+        info: "Magreza",
+        obesity: "0",
     },
     {
-        mín .: 18, 5 ,
-        máx .: 24, 9 ,
-        classificação: "Entre 18,5 e 24,9" ,
-        info: "Normal" ,
-        obesidade: "0" ,
+        min: 18.5,
+        max: 24.9,
+        classification: "Entre 18,5 e 24,9",
+        info: "Normal",
+        obesity: "0",
     },
     {
-        min: 25 ,
-        máx .: 29, 9 ,
-        classificação: "Entre 25,0 e 29,9" ,
-        info: "Sobrepeso" ,
-        obesidade: "eu" ,
+        min: 25,
+        max: 29.9,
+        classification: "Entre 25,0 e 29,9",
+        info: "Sobrepeso",
+        obesity: "I",
     },
     {
-        min: 30 ,
-        máx .: 39, 9 ,
-        classificação: "Entre 30,0 e 39,9" ,
-        info: "Obesidade" ,
-        obesidade: "II" ,
+        min: 30,
+        max: 39.9,
+        classification: "Entre 30,0 e 39,9",
+        info: "Obesidade",
+        obesity: "II",
     },
     {
-        min: 40 ,
-        máx .: 99 ,
-        classificação: "Maior que 40,0" ,
-        info: "Obesidade grave" ,
-        obesidade: "III" ,
+        min: 40,
+        max: 99,
+        classification: "Maior que 40,0",
+        info: "Obesidade grave",
+        obesity: "III",
     },
 ];
 
 //seleção de elementos
-const imcTable = document.querySelector('#imc-tablw');
+const imcTable = document.querySelector("#imc-table");
 
-const heightInput = document.querySelector('#hieght');
-const weightInput = document.querySelector('#weight');
-const calcBtn = document.querySelector('#calc-btn');
-const clearBtn = document.querySelector('#clear-btn');
+const heightInput = document.querySelector("#height");
+const weightInput = document.querySelector("#weight");
+const calcBtn = document.querySelector("#calc-btn");
+const clearBtn = document.querySelector("#clear-btn");
 
 const calcContainer = document.querySelector("#calc-container");
 const resultContainer = document.querySelector("#result-container");
@@ -117,7 +117,7 @@ calcBtn.addEventListener("click", (e) => {
     const weight = +weightInput.value.replace(",", ".")
     const height = +heightInput.value.replace(",", ".")
 
-    if (| weight || | height) return;
+    if (!weight || !height) return;
 
     const imc = calcImc(weight, height)
 
@@ -129,7 +129,7 @@ calcBtn.addEventListener("click", (e) => {
         }
     });
 
-    if (| info) return;
+    if (!info) return;
 
     imcNumber.innerText = imc
     imcInfo.innerText = info

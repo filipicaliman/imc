@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora IMC</title>
     <link rel="stylesheet" href="./css/style.css">
-
-    <script src="./js/script.js" defer></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -21,11 +19,21 @@
                 <div class="form-inputs">
                     <div class="form-control">
                         <label for="height">Altura: </label>
-                        <input type="text" name="height" id="height" placeholder="Exemplo 1,75">
+                        <input 
+                        type="text" 
+                        name="height" 
+                        id="height" 
+                        placeholder="Exemplo 1,75" 
+                        required>
                     </div>
                     <div class="form-control">
                         <label for="weight">Peso: </label>
-                        <input type="text" name="weight" id="weight" placeholder="Exemplo 83,5">
+                        <input 
+                        type="text" 
+                        name="weight" 
+                        id="weight" 
+                        placeholder="Exemplo 83,5"
+                        required>
                     </div>
                 </div>
                 <div class="action-control">
@@ -48,5 +56,7 @@
             <button id="back-btn">Voltar</button>
         </div>
     </div>
+
+    
 </body>
 </html>
